@@ -1,0 +1,23 @@
+<li class="mgt-2 p-1" [ngClass]="loveIts > 0 ? 'list-group-item-success ' : 'list-group-item-danger' ">
+    <p>
+        <strong class="h3"> {{ title }} </strong>
+        <span class="pull-right">{{ created_at | date: 'EEEE  d/MM/y H:mm' }}</span>
+    </p>
+    
+    <p>
+      {{ content }}
+    </p>
+
+
+    <div>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="onLoveIt()">
+        Love It
+      </button>
+      <button tpe="button" class="mgl-2 btn btn-danger" (click)="onDontLoveIt()">
+        Don't love it
+      </button>
+    </div>
+</li>
